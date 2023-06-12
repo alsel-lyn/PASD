@@ -171,9 +171,9 @@ clf = clf.fit(X_train,y_train)
 #Predict the response for test dataset
 y_pred = clf.predict(X_test)
 
-st.write("Akurasi:")
+#st.write("Akurasi:")
 accuracy = metrics.accuracy_score(y_test, y_pred)
-st.write(accuracy)
+#st.write(accuracy)
 
 y_test.value_counts()
 
