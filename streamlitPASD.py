@@ -3,7 +3,6 @@ import random as rd
 import numpy as np
 import pandas as pd
 import matplotlib
-matplotlib.use('Agg')  # Set the backend to Agg
 import matplotlib.pyplot as plt
 import seaborn as sb
 
