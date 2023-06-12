@@ -72,8 +72,8 @@ dfgs_scaled = data_scaler.fit_transform(dfgs_no_outl[['Sales', 'Quantity', 'Disc
 from scipy.cluster.hierarchy import linkage, dendrogram
 
 complete_clustering = linkage(list(dfgs_scaled), method="complete", metric="euclidean")
-average_clustering = linkage(list(dfgs_scaled), method="average", metric="euclidean")
-single_clustering = linkage(list(dfgs_scaled), method="single", metric="euclidean")
+#average_clustering = linkage(list(dfgs_scaled), method="average", metric="euclidean")
+#single_clustering = linkage(list(dfgs_scaled), method="single", metric="euclidean")
 
 #st.write("Single Clustering")
 #fig, ax = plt.subplots(figsize=[10, 6])
