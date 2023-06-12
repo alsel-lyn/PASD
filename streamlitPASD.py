@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sb
 
 #Header
-st.title("PREDICTING DATA : LAKU DAN TIDAK LAKU")
+st.title("ANALYZING DATA : LAKU DAN TIDAK LAKU")
 st.header("Mata kuliah : Perancangan Aplikasi Sains Data")
 st.write(" 1. Alya Selynindya (1305210079) \n 2. Shamaya Mayra Argyanti(1305213112) \n 3. Jati Tepatasa Bagastakwa(1305213059)" )
 st.text(" - Aplikasi sains data untuk memprediksi laku dan tidak laku") 
@@ -27,7 +27,7 @@ if(st.button("Dataset Global Superstore yang dipakai")) :
 with st.container() :
   st.write("---")
 
-st.write( "Boxplot Outliers Distribution" )
+st.write( "Boxplot Outliers Distribution dengan Outliers" )
 def show_boxplot(df):
     fig, ax = plt.subplots(figsize=[14,6])
     sb.boxplot(data=df, orient="v", ax=ax)
@@ -36,12 +36,12 @@ def show_boxplot(df):
     ax.set_xlabel("Attributes", fontweight='bold')
     st.pyplot(fig)
 
-if(st.button("Visualisasi Boxplot")) :
+if(st.button("Visualisasi Boxplot dengan Outliers")) :
    show_boxplot(dfgsuse)
 
 #------------------------------------------------------------------------------------------------------
 
-st.write( "Boxplot Outliers Distribution" )
+st.write( "Boxplot Outliers Distribution tanpa Outliers" )
 def remove_outliers(data):
   df = data.copy() 
   for col in list(df.columns):
@@ -56,7 +56,7 @@ def remove_outliers(data):
 
 dfgs_no_outl = remove_outliers(dfgsuse)
 
-if(st.button("Visualisasi Boxplot dengan Percentil")) :
+if(st.button("Visualisasi Boxplot tanpa Outliers")) :
    show_boxplot(dfgs_no_outl)
    dfgs_no_outl
 
@@ -208,11 +208,11 @@ if(st.button("Dataset Laku : ")) :
 
 #visualisasi akhir
 
-st.write("Data Penjualan Lima Teratas Produk yang Laku")
-datasetlaku_produk_info_sub_cat
+#st.write("Data Penjualan Lima Teratas Produk yang Laku")
+#datasetlaku_produk_info_sub_cat
 
-st.write("Data Penjualan Lima Teratas Sub-Katergori yang Laku")
-datasetlaku_subcattop5
+#st.write("Data Penjualan Lima Teratas Sub-Katergori yang Laku")
+#datasetlaku_subcattop5
 
 datasetlaku_subcattop5['Quantity'].plot(kind='bar')
 st.pyplot(plt)
