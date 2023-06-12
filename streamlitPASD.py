@@ -13,7 +13,7 @@ st.text(" - Aplikasi sains data untuk memprediksi laku dan tidak laku")
 st.text("   sebuah barang dari dataset global superstore")
 
 #menampilkan boxplot
-dfgs = pd.read_excel(r"C:\Users\alsel\Desktop\Global Superstore (5000 data).xlsx")
+dfgs = pd.read_excel("Global Superstore (5000 data).xlsx")
 
 dfgsuse = dfgs[['Row ID','Sales', 'Quantity', 'Discount', 'Profit']]
 if(st.button("Dataset Global Superstore")) :
