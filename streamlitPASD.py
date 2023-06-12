@@ -18,7 +18,9 @@ dfgs = pd.read_excel("Global Superstore (5000 data).xlsx")
 dfgsuse = dfgs[['Row ID','Sales', 'Quantity', 'Discount', 'Profit']]
 if(st.button("Dataset Global Superstore")) :
    dfgs
-
+   
+if(st.button("Dataset Global Superstore yang dipakai")) :
+   dfgsuse
 #------------------------------------------------------------------------------------------------------
 
 with st.container() :
