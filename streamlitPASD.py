@@ -9,14 +9,17 @@ import seaborn as sb
 st.title("ANALYZING DATA : LAKU ATAU TIDAK LAKU")
 st.header("Mata kuliah : Perancangan Aplikasi Sains Data")
 st.write(" 1. Alya Selynindya (1305210079) \n 2. Shamaya Mayra Argyanti(1305213112) \n 3. Jati Tepatasa Bagastakwa(1305213059)" )
-st.text(" - Aplikasi sains data untuk memprediksi laku dan tidak laku") 
-st.text("   sebuah barang dari dataset global superstore")
+st.text(" |Aplikasi sains data untuk analisis laku dan tidak laku", \n, "sebuah barang dari dataset data penjualan|")
+
+with st.container() :
+  st.write("---")
 
 #menampilkan boxplot
 dfgs = pd.read_excel("Global Superstore (5000 data).xlsx")
 #dfgs = st.file_uploader("Upload a file", type=["csv", "xlsx", "txt"])
 
 dfgsuse = dfgs[['Row ID','Sales', 'Quantity', 'Discount', 'Profit']]
+st.write("Dataset Global Superstore")
 if(st.button("Dataset Global Superstore")) :
    dfgs
 
