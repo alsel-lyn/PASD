@@ -214,14 +214,14 @@ if(st.button("Dataset Laku : ")) :
 #st.write("Data Penjualan Lima Teratas Sub-Katergori yang Laku")
 #datasetlaku_subcattop5
 
+st.write("Kuantitas Barang dari Lima Teratas Sub-Katergori yang Laku")
 datasetlaku_subcattop5['Quantity'].plot(kind='bar')
 st.pyplot(plt)
-st.write("Kuantitas Barang dari Lima Teratas Sub-Katergori yang Laku")
 plt.title("Kuantitas Barang dari Lima Teratas Sub-Katergori yang Laku", fontsize=15, pad=15)
 plt.show()
 
+st.write("Perbandingan Sales dan Profit dari Sub-Katergori yang Laku")
 dataset_laku.groupby('Sub-Category').agg({'Sales':'sum', 'Profit':'sum'}).sort_values(by=['Sales', 'Profit'], ascending=False).plot(kind='bar')
 st.pyplot(plt)
-st.write("Perbandingan Sales dan Profit dari Sub-Katergori yang Laku")
 plt.title("Perbandingan Sales dan Profit dari Sub-Katergori yang Laku", fontsize=15, pad=15)
 plt.show()
