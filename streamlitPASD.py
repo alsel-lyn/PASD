@@ -36,7 +36,7 @@ def show_boxplot(df):
     ax.set_xlabel("Attributes", fontweight='bold')
     st.pyplot(fig)
 
-if(st.button("Visualisasi Boxplot")) :
+if(st.button("Visualisasi Boxplot dengan Outliers")) :
    show_boxplot(dfgsuse)
 
 #------------------------------------------------------------------------------------------------------
@@ -56,7 +56,7 @@ def remove_outliers(data):
 
 dfgs_no_outl = remove_outliers(dfgsuse)
 
-if(st.button("Visualisasi Boxplot dengan Percentil")) :
+if(st.button("Visualisasi Boxplot tanpa Outliers")) :
    show_boxplot(dfgs_no_outl)
    dfgs_no_outl
 
