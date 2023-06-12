@@ -75,27 +75,27 @@ complete_clustering = linkage(list(dfgs_scaled), method="complete", metric="eucl
 average_clustering = linkage(list(dfgs_scaled), method="average", metric="euclidean")
 single_clustering = linkage(list(dfgs_scaled), method="single", metric="euclidean")
 
-st.write("Single Clustering")
-fig, ax = plt.subplots(figsize=[10, 6])
-dendrogram(single_clustering, ax=ax)
-ax.set_title("Dendrogram")
-ax.set_xlabel("Data Points")
-ax.set_ylabel("Distance")
-st.pyplot(fig)
+#st.write("Single Clustering")
+#fig, ax = plt.subplots(figsize=[10, 6])
+#dendrogram(single_clustering, ax=ax)
+#ax.set_title("Dendrogram")
+#ax.set_xlabel("Data Points")
+#ax.set_ylabel("Distance")
+#st.pyplot(fig)
 
 #------------------------------------------------------------------------------------------------------
 
-st.write("Average Clustering")
-fig, ax = plt.subplots(figsize=[10, 6])
-dendrogram(average_clustering, ax=ax)
-ax.set_title("Dendrogram")
-ax.set_xlabel("Data Points")
-ax.set_ylabel("Distance")
-st.pyplot(fig)
+#st.write("Average Clustering")
+#fig, ax = plt.subplots(figsize=[10, 6])
+#dendrogram(average_clustering, ax=ax)
+#ax.set_title("Dendrogram")
+#ax.set_xlabel("Data Points")
+#ax.set_ylabel("Distance")
+#st.pyplot(fig)
 
 #------------------------------------------------------------------------------------------------------
 
-st.write("Complete Clustering")
+st.title("Hierarical Clustering : Complete Clustering")
 fig, ax = plt.subplots(figsize=[10, 6])
 dendrogram(complete_clustering, ax=ax)
 ax.set_title("Dendrogram")
