@@ -27,7 +27,11 @@ dfgsuse
 with st.container() :
   st.write("---")
 
-st.write( "Boxplot Outliers Distribution dengan Outliers" )
+#st.write( "Perbandingan Boxplot Outliers Distribution dari dataset dengan Outliers dan tanpa Outliers" )
+
+#------------------------------------------------------------------------------------------------------
+
+st.write( "Perbandingan Boxplot Outliers Distribution dari dataset dengan Outliers dan tanpa Outliers" )
 def show_boxplot(df):
     fig, ax = plt.subplots(figsize=[14,6])
     sb.boxplot(data=df, orient="v", ax=ax)
@@ -35,13 +39,7 @@ def show_boxplot(df):
     ax.set_ylabel("Range", fontweight='bold')
     ax.set_xlabel("Attributes", fontweight='bold')
     st.pyplot(fig)
-
-if(st.button("Visualisasi Boxplot dengan Outliers")) :
-   show_boxplot(dfgsuse)
-
-#------------------------------------------------------------------------------------------------------
-
-st.write( "Boxplot Outliers Distribution tanpa Outliers" )
+   
 def remove_outliers(data):
   df = data.copy() 
   for col in list(df.columns):
@@ -56,7 +54,9 @@ def remove_outliers(data):
 
 dfgs_no_outl = remove_outliers(dfgsuse)
 
-if(st.button("Visualisasi Boxplot tanpa Outliers")) :
+if(st.button("Visualisasi Boxplot")) :
+   show_boxplot(dfgsuse)
+   dfgsuse
    show_boxplot(dfgs_no_outl)
    dfgs_no_outl
 
