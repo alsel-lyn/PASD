@@ -95,7 +95,7 @@ single_clustering = linkage(list(dfgs_scaled), method="single", metric="euclidea
 
 #------------------------------------------------------------------------------------------------------
 
-st.title("Hierarical Clustering : Complete Clustering")
+st.header("Hierarical Clustering : Complete Clustering")
 fig, ax = plt.subplots(figsize=[10, 6])
 dendrogram(complete_clustering, ax=ax)
 ax.set_title("Dendrogram")
