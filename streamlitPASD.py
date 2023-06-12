@@ -113,24 +113,24 @@ from sklearn.tree import DecisionTreeClassifier # Import Decision Tree Classifie
 from sklearn.model_selection import train_test_split # Import train_test_split function
 from sklearn import metrics
 
-st.write("Boxplot Cluster Sales")
+st.write("Boxplot Sales for each Cluster")
 cluster_labels_c = sch.cut_tree(complete_clustering, n_clusters=2).reshape(-1, )
 dfgs_no_outl["Cluster"] = cluster_labels_c
 fig, ax = plt.subplots(figsize=(10, 6))
 sb.boxplot(x='Cluster', y='Sales', data=dfgs_no_outl, ax=ax)
 st.pyplot(fig)
 
-st.write("Boxplot Cluster Quantity")
+st.write("Boxplot Quantity for each Cluster")
 fig, ax = plt.subplots(figsize=(10, 6))
 sb.boxplot(x='Cluster', y='Quantity', data=dfgs_no_outl, ax=ax)
 st.pyplot(fig)
 
-st.write("Boxplot Cluster Profit")
+st.write("Boxplot Profit for each Cluster")
 fig, ax = plt.subplots(figsize=(10, 6))
 sb.boxplot(x='Cluster', y='Profit', data=dfgs_no_outl, ax=ax)
 st.pyplot(fig)
 
-st.write("Boxplot Cluster Discount")
+st.write("Boxplot Discount for each Cluster")
 fig, ax = plt.subplots(figsize=(10, 6))
 sb.boxplot(x='Cluster', y='Discount', data=dfgs_no_outl, ax=ax)
 st.pyplot(fig)
